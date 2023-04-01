@@ -5,38 +5,59 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+@font-face {
+  font-family: "Outfit";
+  src: local("Outfit"), url(./assets/font/Outfit-Medium.ttf) format("truetype");
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+@font-face {
+  font-family: "Outfit Bold";
+  src: local("Outfit Bold"),
+    url(./assets/font/Outfit-Bold.ttf) format("truetype");
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+* {
+  font-family: Outfit, serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
 }
-
+body {
+  background-color: var(--Light-gray);
+}
+.app {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-content: center;
+}
 .card {
-  padding: 2em;
+  width: 260px;
+  background-color: var(--White);
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
 }
-
+.qr-code-image > img {
+  border-radius: 10px;
+  width: 100%;
+}
+.qr-code-title {
+  font-family: "Outfit Bold", serif;
+  font-size: 20px;
+  color: var(--Dark-blue);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.qr-code-detail {
+  color: var(--Grayish-blue);
+  padding-bottom: 20px;
+}
 .read-the-docs {
   color: #888;
 }
